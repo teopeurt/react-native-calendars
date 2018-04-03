@@ -41,12 +41,16 @@ function month(xd) {
 }
 
 function weekDayNames(firstDayOfWeek = 0) {
-  let weekDaysNames = XDate.locales[XDate.defaultLocale].dayNamesShort;
-  const dayShift = firstDayOfWeek % 7;
-  if (dayShift) {
-    weekDaysNames = weekDaysNames.slice(dayShift).concat(weekDaysNames.slice(0, dayShift));
-  }
-  return weekDaysNames;
+  //let weekDaysNames = XDate. locales[XDate.defaultLocale].dayNamesShort;
+  // const dayShift = firstDayOfWeek % 7;
+  // if (dayShift) {
+  //   weekDaysNames = weekDaysNames.slice(dayShift).concat(weekDaysNames.slice(0, dayShift));
+  // }
+  return fixedDayNames(firstDayOfWeek);
+}
+
+function fixedDayNames(firstDayOfWeek){
+  return (firstDayOfWeek === 0) ? ['M', 'T', 'W', 'T', 'F', 'S', 'S'] : ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
 }
 
 function page(xd, firstDayOfWeek) {
