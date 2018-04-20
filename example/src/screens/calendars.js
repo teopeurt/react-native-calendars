@@ -40,6 +40,7 @@ export default class CalendarsScreen extends Component {
           }}
           // disabledByDefault={true}
           hideArrows={true}
+          hideDayNames={true}
         />
         <Text style={styles.text}>Calendar with custom day component</Text>
         <Calendar
