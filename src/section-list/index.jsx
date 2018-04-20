@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { SectionList } from 'react-native';
 
-class TenxWrappedSectionList extends Component {
+class TenxWrappedSectionList extends React.Component {
   constructor(props) {
-    super(props);
+    super(...props);
   }
 
   render() {
